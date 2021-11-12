@@ -1,0 +1,13 @@
+Archives(Tar files)
+
+tar cf archive.tar directory      #creates tar named archive.tar containing directory
+
+tar xf archive.tar                #extract the contents from archive.tar
+
+tar czf archive.tar.gz directory  #create a compressed tar file name archive.tar.gz
+
+tar xzf archive.tar.gz            #extract a gzip compressed tar file
+
+tar cjf archive.tar.bz2 directory #create a tar file with bzip2 compression
+
+tar xjf archive.tar.bz2           #extract a bzip2 compressed tar file
