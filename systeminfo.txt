@@ -1,0 +1,24 @@
+knowing system information by using linux commands
+
+
+uname -a                  #display linux system information
+
+uname -r                  #display kernel release information 
+
+cat etc/redhat-release    #shows which version of redhat is installed
+
+uptime                    #shows how long the system is running +load
+
+hostname                  #show system host name
+
+hostname -I               #display all local ip address of the host
+
+last reboot               #shows system reboot history
+
+date                      #show the current date and time
+
+cal                       #shows this months calender
+
+w                         #display who is online
+
+whoami                    #who are you logged as in
