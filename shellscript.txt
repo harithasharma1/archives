@@ -14,3 +14,16 @@ OUTPUT:
 expr $i\* $jexpr $i\* $jexpr $i\* $j
 expr $i\* $jexpr $i\* $jexpr $i\* $j
 expr $i\* $jexpr $i\* $jexpr $i\* $j
+
+SECOND PROGRAM:
+#!/bin/sh
+smallest=1000
+for i in 5 8 19 8 7 3;do
+        if test $i -lt $smallest;then
+                smallest=$i
+        fi
+                done
+echo $smallest
+
+OUTPUT:
+3

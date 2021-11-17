@@ -1,0 +1,8 @@
+Directory navigation by using linux commands
+
+
+cd ..            #to go up one level of directory tree 
+
+cd               #go to the home directory
+
+cd /etc          #change to the /etc directory
