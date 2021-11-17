@@ -95,3 +95,20 @@ OUTPUT:
 Enter your lucky number
 999
 You got third prize
+
+
+SIXTH PROGRAM:
+
+
+#!/bin/bash
+
+string1="Linux"
+string2="Hint"
+echo "$string1$string2"
+string3=$string1+$string2
+string3+=" is a good tutorial blog site"
+echo $string3
+
+OUTPUT:
+LinuxHint
+Linux+Hint is a good tutorial blog site
