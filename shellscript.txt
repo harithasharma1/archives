@@ -151,3 +151,15 @@ echo "X+Y=$result"
 
 OUTPUT:
 X+Y=0
+
+TENTH PROGRAM:
+
+#!/bin/bash
+
+echo “Wait for 5 seconds”
+sleep 5
+echo “Completed”
+
+OUTPUT:
+“Wait for 5 seconds”
+“Completed”
