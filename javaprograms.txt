@@ -1,0 +1,117 @@
+public class Main
+{
+public static void main(String args[])
+{
+System.out.println("hello world");
+System.out.println("hello java);
+}
+} 
+
+output:
+hello world 
+hello java
+
+Second program:
+
+import java.util.Scanner;
+public class Condition
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter any number:");
+        int n=sc.nextInt();
+        if(n%2==0)
+        {
+            if(n<=2 && n<=5)
+            {
+            System.out.println("not weird");
+            }
+        else if(6<=n && n>20)
+        {
+            System.out.println("weird");
+        }
+    else
+    {
+System.out.println("not weird");
+    } 
+}       
+     else
+        {
+            System.out.println("not weird");
+        }
+    }
+}  
+
+output:
+enter any number:
+55
+weird    
+
+Third program:
+
+
+import java.util.Scanner;
+public class Stdinout
+{
+    public static void main (String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter values:");
+        int a=sc.nextInt();
+        double b=sc.nextDouble();
+        String c=s.nextLine();
+        System.out.println("string:" +c);
+        System.out.println("Double:" +b);
+        System.out.println("int:" +a);
+       }
+}
+
+output:
+enter values:
+42
+14.89
+haritha
+
+haritha
+14.89
+42
+
+Fourth program:
+
+
+import java.util.Scanner;
+class Multiplication
+{
+    public static void main(String[] args)
+    {
+        int m;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter input:");
+        int n=sc.nextInt();
+        for(int i=1;i<=10;i++)
+        {
+            m=n*i;
+            System.out.println(n+"*"+i+"="+m);
+        }
+    }
+}
+
+ 
+output:
+enter input:
+2
+2*1=2
+2*2=4
+2*3=6
+2*4=8
+2*5=10
+2*6=12
+2*7=14
+2*8=16
+2*9=18
+2*10=20
+
+
+                    
