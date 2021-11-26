@@ -114,4 +114,45 @@ enter input:
 2*10=20
 
 
-                    
+
+Day2:
+
+Program1:
+
+import java.util.*;
+public class Series
+{
+      public static void main(String args[])
+      {
+              double temp;
+              Scanner sc=new Scanner(System.in);
+              int t=sc.nextInt();
+              for(int i=0;i<t;i++)
+              {
+                   int a=sc.nextInt();
+                   int b=sc.nextInt();
+                   int n=sc.nextInt();
+                   temp=0.0;
+                   for(int j=0;j<n;j++)
+                   {
+                     temp=temp+(Math.pow(2,j)*b);
+                     System.out.println(a+(int)temp+" ");
+                   }
+                   System.out.println();
+              }
+      }
+} 
+
+Output:
+2
+0 2 10
+2
+6
+14
+30
+62
+126
+254
+510
+1022
+2046                   
