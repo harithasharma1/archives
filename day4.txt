@@ -1,0 +1,115 @@
+Day_4:
+
+import java.io.*;
+import java.util.*;
+public class Javastrings
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+String a=sc.nextLine();
+String b=sc.nextLine();
+System.out.println(a.length());
+System.out.println(b.length());
+System.out.println(a.length()+b.length());
+int c=a.compareTo(b);
+if(c<0)
+{
+System.out.println("no");
+}
+else
+{
+System.out.println("yes");
+}
+System.out.println(a.substring(0,1).toUpperCase()+a.substring(1).toLowerCase()+" ");
+System.out.println(b.substring(0,1).toUpperCase()+b.substring(1).toLowerCase());
+}
+}
+
+Output:
+hello
+world
+5
+5
+10
+no
+Hello
+World
+
+
+Program2:
+
+import java.util.*;   
+class Palindrome 
+{  
+   public static void main(String args[])  
+   {  
+      String original, reverse = ""; 
+      Scanner in = new Scanner(System.in);   
+      System.out.println("Enter a string to check if it is a palindrome");  
+      original = in.nextLine();   
+      int length = original.length();   
+      for ( int i = length - 1; i >= 0; i-- )  
+         reverse = reverse + original.charAt(i);  
+      if (original.equals(reverse))  
+         System.out.println("Yes");  
+      else  
+         System.out.println("No");   
+   }  
+}
+
+Output:
+Enter a string to check if it is a palindrome
+madam
+Yes
+
+Program3:
+
+import java.util.*;
+public class Prime
+{
+ public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int num=sc.nextInt();
+    System.out.println("Enter a number:");
+    boolean flag = false;
+    for (int i = 2; i <= num / 2; ++i) {
+      if (num % i == 0) {
+        flag = true;
+        break;
+      }
+    }
+
+    if (!flag)
+      System.out.println(num + " is a prime number.");
+    else
+      System.out.println(num + " is not a prime number.");
+  }
+}
+
+Output:
+89
+Enter a number:
+89 is a prime number.
+
+Program4:
+
+import java.util.*;
+import java.io.*;
+public class Substring
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+String s=sc.nextLine();
+int a=sc.nextInt();
+int b=sc.nextInt();
+System.out.println(s.substring(a,b));
+}
+}
+
+Output:
+Saiharitha
+2
+7
+ihari
