@@ -1,0 +1,161 @@
+Day5:
+
+Program1:
+
+import java.util.*;
+public class Pattern1   
+{   
+public static void main(String args[])   
+{ 
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter number of rows: ");
+int rows = sc.nextInt();
+sc.close();
+for(int i=0; i<rows; i++)   
+{     
+for(int j=0; j<=i; j++)   
+{   
+System.out.print("* ");   
+}     
+System.out.println();
+}
+}
+}
+
+Output:
+
+Enter number of rows:
+5
+*
+* *
+* * *
+* * * *
+* * * * *   
+
+
+Program2:
+
+import java.util.*;
+public class Pattern2
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+sc.close();
+for(int i=1;i<=n;i++)
+{
+for(int j=1;j<=i;j++)
+{
+System.out.print(j + " ");
+}
+System.out.println();
+}
+}
+}
+
+Output:
+5
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+
+
+Program3:
+
+import java.util.*;
+public class Pattern3
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+sc.close();
+char c='A';
+for(int i=1;i<=n;i++)
+{
+for(int j=1;j<=i;j++)
+{
+System.out.print(c+" ");
+c++;
+}
+System.out.println();
+}
+}
+}
+
+Output:
+5
+A
+B C
+D E F
+G H I J
+K L M N O
+
+
+Program4:
+
+import java.util.*;
+public class Pattern4
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+sc.close();
+for(int i=1;i<=n;i++)
+{
+char c='A';
+for(int j=1;j<=i;j++)
+{
+System.out.print(c+" ");
+c++;
+}
+System.out.println();
+}
+}
+}
+
+Output:
+5
+A
+A B
+A B C
+A B C D
+A B C D E
+
+
+Program5:
+
+import java.util.Scanner;
+  
+public class Pattern5
+{            
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);    
+        System.out.println("Enter the number of rows: ");    
+        int rows = sc.nextInt();         
+        for (int i = 1; i <= rows; i++) 
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                System.out.print(i+" ");
+            }
+               
+            System.out.println();
+        }         
+        sc.close();
+    }
+}
+
+Output:
+
+5
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
