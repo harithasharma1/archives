@@ -1,0 +1,202 @@
+
+SORTING TECHNIQUES:
+
+INSERTIONSORT:
+
+
+import java.util.Scanner;
+
+public class Insertionsort
+{
+   public static void main(String[] args)
+   {
+      int n, i, j, element;
+      Scanner scan = new Scanner(System.in);
+      
+      System.out.print("Enter the Size of Array: ");
+      n = scan.nextInt();
+      int[] arr = new int[n];
+      System.out.print("Enter " +n+ " Elements: ");
+      for(i=0; i<n; i++)
+         arr[i] = scan.nextInt();
+      
+      for(i=1; i<n; i++)
+      {
+         element = arr[i];
+         
+         for(j=(i-1); j>=0 && arr[j]>element; j--)
+            arr[j+1] = arr[j];
+         
+         arr[j+1] = element;
+      }
+      
+      System.out.println("\nThe new sorted array is: ");
+      for(i=0; i<n; i++)
+         System.out.print(arr[i]+ " ");
+   }
+}
+
+Output:
+
+Enter the Size of Array: 10
+Enter 10 Elements: 1
+34
+56
+78
+90
+43
+23
+48
+91
+29
+
+The new sorted array is:
+1 23 29 34 43 48 56 78 90 91
+
+BUBBLESORT:
+
+
+import java.util.Scanner;
+class Bubblesort {
+	public static void main(String []args) {
+		int n, i, j, swap;
+		Scanner in = new Scanner(System.in);
+		System.out.println("Input number of integers to sort");
+		n = in.nextInt();
+		int array[] = new int[n];
+		System.out.println("Enter " + n + " elements ");
+		for (i = 0; i < n; i++) 
+		      array[i] = in.nextInt();
+		for (i = 0; i < ( n - 1 ); i++) {
+			for (j = 0; j < n - i - 1; j++) {
+				if (array[j] > array[j+1]) 
+				 {
+					swap       = array[j];
+					array[j]   = array[j+1];
+					array[j+1] = swap;
+				}
+			}
+		}
+		System.out.println("Sorted list of numbers");
+		for (i = 0; i < n; i++) 
+		      System.out.println(array[i]);
+	}
+}
+
+
+OUTPUT:
+
+Input number of integers to sort
+10
+Enter 10 elements
+23
+78
+90
+67
+43
+32
+37
+98
+888
+666
+Sorted list of numbers
+23
+32
+37
+43
+67
+78
+90
+98
+666
+888
+
+MERGESORT:
+
+
+import java.util.*;
+public class Mergesort
+{ 
+  public static void merge(int a[],int l,int m,int h)
+   {  
+       int i, j,c=l;
+       int b[]=new int[h+1];
+       for(i = l,j = m+1; i<=m && j<=h; c++)
+             {
+                  if(a[i] <= a[j])
+                  b[c] = a[i++];
+                   else
+                   b[c] = a[j++];
+      	}
+	 while(i <= m )    
+                 b[c++] = a[i++];
+ 
+               while(j<=h)   
+                 b[c++] = a[j++];
+          
+   	 for(i = l ; i <= h; i++)
+                        a[i] = b[i];
+   } 
+  
+   public static void Sort(int a[],int l,int h)
+   {  
+         if(l<h)
+        {
+           int m=(l+h)/2;
+           Sort(a,l,m);
+           Sort(a,m+1,h);
+           merge(a,l,m,h);
+ 
+         } 
+    } 
+ 
+ public static void printarray(int a[])
+{
+       for(int i=0; i < a.length; i++)
+        {
+        
+        System.out.print(a[i]+"  ");
+        }
+       
+}
+    public static void main(String[] args) 
+    {
+        int n, res,i;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter number of elements in the array:");
+        n = s.nextInt();
+        int a[] = new int[n];
+        System.out.println("Enter "+n+" elements ");
+        for( i=0; i < n; i++)
+        {
+            a[i] = s.nextInt();
+        }
+ 
+        System.out.println( "elements in array ");
+        printarray(a);
+         Sort(a,0,n-1);
+        System.out.println( "\nelements after sorting");
+         printarray(a);
+       
+  }
+ 
+}
+
+OUTPUT:
+
+Enter number of elements in the array:10
+Enter 10 elements
+45
+900
+7654
+98
+100
+923
+78
+65
+45
+80
+elements in array
+45  900  7654  98  100  923  78  65  45  80
+elements after sorting
+45  45  65  78  80  98  100  900  923  7654
