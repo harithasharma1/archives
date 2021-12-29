@@ -1,0 +1,524 @@
+STRING METHODS:
+
+CharAt():
+
+Program1:
+
+public class CharAt1{  
+public static void main(String args[]){  
+String name="Haritha";  
+char ch=name.charAt(4);//returns the char value at the 4th index  
+System.out.println(ch);  
+}
+} 
+
+Output:t 
+
+
+Program2:
+
+import java.util.*;
+public class CharAt2     
+{   
+public static void main(String[] args)   
+{   
+Scanner sc = new Scanner(System.in);   
+System.out.print("Input a character: ");   
+char c = sc.next().charAt(4);     
+System.out.println("You have entered "+c);   
+}   
+}
+
+Output:
+Input a character:Haritha
+You have entered:t
+-------------------------------------------------------
+Length() method:
+
+Program1:
+
+public class Length1 {  
+    public static void main(String[] args) {  
+        String str = "Chocolates";  
+        if(str.length()>0) {  
+            System.out.println("String is not empty and length is: "+str.length());  
+        }  
+        str = "";  
+        if(str.length()==0) {  
+            System.out.println("String is empty now: "+str.length());  
+        }  
+    }  
+}  
+
+Output:
+String is not empty and length is 10
+String is empty now
+
+Program2:
+
+class Length2   
+{   
+public static void main(String argvs[])  
+{  
+String str = "Sai Haritha";  
+int size = str.length();  
+  
+System.out.println("Reverse of the string: " + "'" + str + "'" + " is");  
+  
+for(int i = 0; i < size; i++)  
+{   
+System.out.print(str.charAt(str.length() - i - 1));  
+}  
+  
+}  
+}  
+
+Output:
+Reverse of the string: 'Sai Haritha' is
+ahtiraH iaS
+
+------------------------------------------------------------------------------------
+
+Format() method;
+
+Program1:
+
+public class Format1{  
+public static void main(String args[]){  
+String name="Jyothsna";  
+String sf1=String.format("name is %s",name);  
+String sf2=String.format("value is %f",32.33434);  
+String sf3=String.format("value is %32.12f",32.33434);//returns 12 char fractional part filling with 0  
+  
+System.out.println(sf1);  
+System.out.println(sf2);  
+System.out.println(sf3);  
+}}
+
+Output:
+
+name is Jyothsna
+value is 32.334340
+value is                  32.334340000000
+
+Program2:
+
+public class Format2 {    
+    public static void main(String[] args) {  
+        String str1 = String.format("%d", 101);           
+        String str2 = String.format("%s", "Sai Haritha");  
+        String str3 = String.format("%f", 101.00);         
+        String str4 = String.format("%x", 101);           
+        String str5 = String.format("%c", 's');           
+        System.out.println(str1);  
+        System.out.println(str2);  
+        System.out.println(str3);  
+        System.out.println(str4);  
+        System.out.println(str5);  
+    } 
+} 
+ 
+Output:
+101
+Sai Haritha
+101.000000
+65
+s
+
+----------------------------------------------------------------------
+SubString() method:
+
+Program1:
+
+public class Substring1{  
+public static void main(String args[]){  
+String s1="Haritha";  
+System.out.println(s1.substring(2,4));//returns va  
+System.out.println(s1.substring(2));//returns vatpoint  
+} 
+}
+
+Output:
+ri
+ritha
+
+Program2:
+
+public class Substring2 {  
+    public static void main(String[] args) {  
+        String s1="Haritha";    
+        String substr = s1.substring(0); // Starts with 0 and goes to end  
+        System.out.println(substr);  
+        String substr2 = s1.substring(5,7); // Starts from 5 and goes to 10  
+        System.out.println(substr2);    
+        String substr3 = s1.substring(5,15); // Returns Exception  
+    }  
+}
+
+Output:
+
+Haritha
+ha
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: begin 5, end 15, length 7
+        at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4601)
+        at java.base/java.lang.String.substring(String.java:2704)
+        at Substring2.main(Substring2.java:8)
+
+----------------------------------------------------------------------------------------------------------
+
+Contains() method:
+
+Program1:
+
+class Contains1{  
+public static void main(String args[]){  
+String name="Sai Haritha Gayathri Sharma";  
+System.out.println(name.contains("Sai"));  
+System.out.println(name.contains("Sharma"));  
+System.out.println(name.contains("hello"));  
+}} 
+
+Output:
+true
+true
+false
+
+Program2:
+
+public class Contains2 {   
+    public static void main(String[] args) {          
+        String str = "Sai Haritha";        
+        if(str.contains("Haritha")) {  
+            System.out.println("This string contains Haritha");  
+        }else  
+            System.out.println("Result not found");       
+    }  
+}  
+
+Output:
+
+This string contains Haritha
+
+---------------------------------------------------------------------
+
+StringJoin() method:
+
+Program1:
+
+public class StringJoin1 {  
+    public static void main(String[] args) {          
+        String date = String.join("/","23","12","2021");    
+        System.out.print(date);    
+        String time = String.join(":", "12","10","10");  
+        System.out.println(" "+time);  
+    }  
+}
+
+Output:
+
+23/12/2021 12:10:10
+
+Program2:
+
+public class StringJoin2{  
+public static void main(String args[]){  
+String joinString1=String.join("-","Sai","Haritha","Gayathri");  
+System.out.println(joinString1);  
+}} 
+
+Output:
+
+Sai-Haritha-Gayathri
+
+---------------------------------------------------------------------------
+
+Equals() method:
+
+Program1:
+
+public class Equals1 {  
+    public static void main(String[] args) {  
+        String s1 = "Haritha";    
+        String s2 = "Haritha";    
+        String s3 = "Sai";  
+        System.out.println(s1.equals(s2)); // True because content is same    
+        if (s1.equals(s3)) {  
+            System.out.println("both strings are equal");  
+        }else System.out.println("both strings are unequal");     
+    }  
+}
+
+Output:
+
+true
+both strings are unequal
+
+Program2:
+
+public class Equals2{  
+public static void main(String args[]){  
+String s1="Arya";  
+String s2="Arya";  
+String s3="ARYA";  
+String s4="Scandy";  
+System.out.println(s1.equals(s2));
+System.out.println(s1.equals(s3));
+System.out.println(s1.equals(s4));  
+}}  
+  
+Output:
+
+true
+false
+false
+------------------------------------------------------------------------------------------
+
+IsEmpty() method:
+
+Program1:
+
+public class IsEmpty1 {  
+    public static void main(String[] args) {  
+        String s1="";    
+        String s2="Haritha";             
+        if(s1.length()==0 || s1.isEmpty())  
+            System.out.println("String s1 is empty");  
+        else System.out.println("s1");        
+        if(s2.length()==0 || s2.isEmpty())  
+            System.out.println("String s2 is empty");  
+        else System.out.println(s2);  
+    }  
+}   
+
+Output:
+
+String s1 is empty
+Haritha
+
+Program2:
+
+public class IsEmpty2  
+{  
+public static void main(String argvs[])  
+{  
+String str = "     ";  
+int size = str.length();    
+if(size == 0)  
+{  
+System.out.println("The string is empty. \n");  
+}  
+else if(size > 0 && str.trim().isEmpty())  
+{  
+System.out.println("The string is blank. \n");  
+}  
+else  
+{  
+System.out.println("The string is not blank. \n");  
+}  
+  
+str = " Sai Haritha ";  
+size = str.length();  
+if(size == 0)  
+{  
+System.out.println("The string is empty. \n");  
+}  
+if(size > 0 && str.trim().isEmpty())  
+{  
+System.out.println("The string is blank. \n");  
+}  
+else  
+{  
+System.out.println("The string is not blank. \n");  
+}  
+}  
+}  
+
+Output:
+
+The string is empty
+The string is not empty
+
+-------------------------------------------------------------------------------------------
+
+String concat() method:
+
+Program1:
+
+public class ConcatExample2 {  
+    public static void main(String[] args) {      
+        String str1 = "Sai";  
+        String str2 = "Haritha";  
+        String str3 = "Gayathri";    
+        String str4 = str1.concat(str2);             
+        String str5 = str1.concat(str2).concat(str3);  
+        System.out.println(str5);  
+    }  
+}  
+
+Output:
+SaiHaritha
+SaiHarithaGayathri
+
+Program2:
+
+public class ConcatExample4  
+{  
+public static void main(String argvs[])  
+{  
+String str = "Country";  
+String s = "India is my ".concat(str) 
+System.out.println(s);    
+}  
+}  
+
+Output:
+India is my Country
+
+--------------------------------------------------------------------------
+String Replace() method:
+
+Program1:
+
+public class ReplaceExample3 {  
+    public static void main(String[] args) {  
+        String str = "oooooo-hhhh-oooooo";  
+        String rs = str.replace("h","s");  
+        System.out.println(rs);  
+        rs = rs.replace("s","h"); 
+        System.out.println(rs);  
+    }  
+} 
+
+Output:
+
+oooooo-ssss-oooooo
+oooooo-hhhh-oooooo
+
+Program2:
+
+public class ReplaceExample1{  
+public static void main(String args[]){  
+String s1="Sai Haritha Gayathri";  
+String replaceString=s1.replace('a','e');
+System.out.println(replaceString);  
+}}   
+
+Output:
+
+Sei Herithe Geyethri
+
+------------------------------------------------------------------------------
+
+EqualsIngnore() method:
+
+Program1:
+
+public class EqualsIgnoreCaseExample{  
+public static void main(String args[]){  
+String s1="Haritha";  
+String s2="Haritha";  
+String s3="HARITHA";  
+String s4="Sai";  
+System.out.println(s1.equalsIgnoreCase(s2)); 
+System.out.println(s1.equalsIgnoreCase(s3));
+System.out.println(s1.equalsIgnoreCase(s4)); 
+}}  
+
+Output:
+true
+true
+false
+---------------------------------------------------------------------------
+split() method:
+
+Program1:
+
+public class SplitExample{  
+public static void main(String args[]){  
+String s1="I love chocolates";  
+String[] words=s1.split("\\s");
+for(String w:words){  
+System.out.println(w);  
+}  
+}} 
+
+Output:
+
+I
+love
+chocolates 
+
+Program2:
+
+public class SplitExample2{  
+public static void main(String args[]){  
+String s1="Sai Haritha Gayathri";  
+System.out.println("returning words:");  
+for(String w:s1.split("\\s",0)){  
+System.out.println(w);  
+}  
+System.out.println("returning words:");  
+for(String w:s1.split("\\s",1)){  
+System.out.println(w);  
+}  
+System.out.println("returning words:");  
+for(String w:s1.split("\\s",2)){  
+System.out.println(w);  
+}  
+  
+}}  
+
+Output:
+returning words:
+Sai 
+Haritha
+Gayathri
+returning words:
+Sai Haritha gayathri 
+returning words:
+Sai Haritha
+Gayathri
+------------------------------------------------------------
+Intern() method:
+
+Program1:
+
+public class InternExample{  
+public static void main(String args[]){  
+String s1=new String("java");  
+String s2="hello";  
+String s3=s1.intern();
+System.out.println(s1==s2);  
+System.out.println(s2==s3);  
+}}  
+
+Output:
+false
+true
+
+Program2:
+
+public class InternExample2 {  
+    public static void main(String[] args) {          
+        String s1 = "Javatpoint";  
+        String s2 = s1.intern();  
+        String s3 = new String("Javatpoint");  
+        String s4 = s3.intern();          
+        System.out.println(s1==s2); 
+        System.out.println(s1==s3);  
+        System.out.println(s1==s4);       
+        System.out.println(s2==s3);  
+        System.out.println(s2==s4);       
+        System.out.println(s3==s4);         
+    }  
+} 
+
+Output:
+true
+false
+true
+false
+true
+false
+
+----------------------------------------------------------- 
